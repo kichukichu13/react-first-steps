@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import './table.css';
-import Row from "../row/row";
+import Row from "../../components/row/row";
 
 const items = [
 	{

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import './main.css';
 import Title from "../title/title";
-import Table from "../table/table";
+import Table from "../../containers/table/table";
 
 const Main = () => (
 	<main>

@@ -16,12 +16,10 @@ const items = [
 		'name': 'Тоже хороший товар',
 		'rating': 1.94,
 		'trend': 14,
-		'price': 4,
 	},
 	{
 		'name': 'Неплохой товар',
 		'rating': 1.69,
-		'trend': 4,
 		'price': 3,
 	},
 	{
@@ -48,7 +46,7 @@ const Table = () => (
 		</thead>
 		<tbody>
 		{items.map(({name, rating, trend, price, reviews, inCart}, index) => (
-			<Row num={index + 1}
+			<Row key={index} num={index + 1}
 				name={name}
 				rating={rating}
 				trend={trend}

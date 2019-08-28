@@ -5,8 +5,8 @@
 }
 
 .items-table td, .items-table th{
-    padding: 1.5rem .7rem .7rem .6rem;
-    text-align: left;
+    padding: .7rem .7rem .7rem .6rem;
+    text-align: right;
     border-bottom: 0.1rem solid #EFEFEF;
 }
 .items-table th{

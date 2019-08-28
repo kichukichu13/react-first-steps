@@ -1,0 +1,25 @@
+.items-table .num{
+    width: 10%;
+}
+.items-table .name{
+    width: 29%;
+}
+.items-table .rating{
+    width: 8%;
+}
+.items-table .trend{
+    width: 8%;
+}
+.items-table .price{
+    width: 12%;
+}
+.items-table .reviews{
+    width: 24%;
+}
+.items-table .cart{
+    width: 9%;
+}
+
+.items-table td.name{
+    font-weight: bold;
+}

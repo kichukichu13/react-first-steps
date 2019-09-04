@@ -43,9 +43,13 @@ class Table extends Component {
 	}
 }
 
-Table.propTypes = {};
+Table.propTypes = {
+	items: PropTypes.array,
+};
 
-Table.defaultProps = {};
+Table.defaultProps = {
+	items: []
+};
 
 export default connect(state => ({
 	items: state.items

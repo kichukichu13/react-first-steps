@@ -33,6 +33,7 @@
     line-height: 3rem;
     margin-left: 1rem;
     cursor: pointer;
+    display: inline-block;
 }
 .item-text .btn:hover{
     background-color: #e7d9d9;

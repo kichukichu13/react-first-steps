@@ -4,26 +4,26 @@ const defaultItems = [
 	{
 		'name': 'Супер товар',
 		'rating': 2.87,
-		'trend': 1,
 		'price': 4,
 		'reviews': 5,
 	},
 	{
 		'name': 'Тоже хороший товар',
 		'rating': 1.94,
+		'price': 4,
 		'trend': 14,
 	},
 	{
 		'name': 'Неплохой товар',
 		'rating': 1.69,
+		'trend': 4,
 		'price': 3,
 	},
 	{
 		'name': 'Такой себе товар',
 		'rating': 0.46,
 		'trend': -17,
-		'price': 1,
-		'inCart': true,
+		'inCart': false,
 	},
 ];
 

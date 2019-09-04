@@ -1,21 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './main.css';
+import './goodsBlock.css';
 import Title from "../title/title";
 import Table from "../../containers/table/table";
+import Wrapper from "../../components/wrapper/wrapper";
 
-const Main = () => (
+const GoodsBlock = () => (
 	<main>
-		<div className="wrapper">
+		<Wrapper>
 			<Title title="Список товаров"/>
 			<Table/>
-		</div>
+		</Wrapper>
 	</main>
 );
 
-Main.propTypes = {};
+GoodsBlock.propTypes = {};
 
-Main.defaultProps = {};
+GoodsBlock.defaultProps = {};
 
-export default Main;
+export default GoodsBlock;

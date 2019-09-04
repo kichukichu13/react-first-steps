@@ -2,14 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import FixedBlock from "../../containers/fixedblock/fixedblock";
 
-const Footer = () => (
+const Footer = ( { showFixedBlock } ) => (
 	<footer>
-		<FixedBlock />
+		{showFixedBlock? (<FixedBlock />): ''}
 	</footer>
 );
 
-Footer.propTypes = {};
+Footer.propTypes = {
+	showFixedBlock: PropTypes.bool
+};
 
-Footer.defaultProps = {};
+Footer.defaultProps = {
+	showFixedBlock: false
+};
 
 export default Footer;

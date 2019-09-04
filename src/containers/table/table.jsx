@@ -1,66 +1,52 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { actionCart } from "../../actions/actionCart"
 
 import './table.css';
 import Row from "../../components/row/row";
+import items from "../../reducers/items";
 
-const items = [
-	{
-		'name': 'Супер товар',
-		'rating': 2.87,
-		'trend': 1,
-		'price': 4,
-		'reviews': 5,
-	},
-	{
-		'name': 'Тоже хороший товар',
-		'rating': 1.94,
-		'trend': 14,
-	},
-	{
-		'name': 'Неплохой товар',
-		'rating': 1.69,
-		'price': 3,
-	},
-	{
-		'name': 'Такой себе товар',
-		'rating': 0.46,
-		'trend': -17,
-		'price': 1,
-		'inCart': true,
-	},
-];
+class Table extends Component {
 
-const Table = () => (
-	<table className="items-table">
-		<thead>
-			<tr className="item-row">
-				<th className="item-column num">#</th>
-				<th className="item-column name">Название</th>
-				<th className="item-column rating">Рейтинг</th>
-				<th className="item-column trend">Тренд</th>
-				<th className="item-column price">Ценовой сегмент</th>
-				<th className="item-column reviews">Отзывы покупателей</th>
-				<th className="item-column cart">В корзину</th>
-			</tr>
-		</thead>
-		<tbody>
-		{items.map(({name, rating, trend, price, reviews, inCart}, index) => (
-			<Row key={index} num={index + 1}
-				name={name}
-				rating={rating}
-				trend={trend}
-				price={price}
-				reviews={reviews}
-				inCart={inCart}
-			/>
-		))}
-		</tbody>
-	</table>
-);
+	render() {
+		const { items, actionCart } = this.props;
+
+		return (
+			<table className="items-table">
+				<thead>
+				<tr className="item-row">
+					<th className="item-column num">#</th>
+					<th className="item-column name">Название</th>
+					<th className="item-column rating">Рейтинг</th>
+					<th className="item-column trend">Тренд</th>
+					<th className="item-column price">Ценовой сегмент</th>
+					<th className="item-column reviews">Отзывы покупателей</th>
+					<th className="item-column cart">В корзину</th>
+				</tr>
+				</thead>
+				<tbody>
+				{items.map(({name, rating, trend, price, reviews, inCart}, index) => (
+					<Row key={index} num={index + 1}
+						 name={name}
+						 rating={rating}
+						 trend={trend}
+						 price={price}
+						 reviews={reviews}
+						 inCart={inCart}
+						 actionCart={actionCart}
+					/>
+				))}
+				</tbody>
+			</table>
+		);
+	}
+}
 
 Table.propTypes = {};
 
 Table.defaultProps = {};
 
-export default Table;
+export default connect(state => ({
+	items: state.items
+}), { actionCart })(Table);

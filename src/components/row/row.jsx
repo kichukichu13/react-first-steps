@@ -8,21 +8,14 @@ class Row extends Component {
 		super(props);
 
 		this.state = {
-			isChecked: props.inCart
+			inCart: props.inCart
 		}
 	}
 
-	handleChange = () => {
-		this.setState({
-			isChecked: !this.state.isChecked
-		});
-	}
-
 	render() {
-		const {num, name, rating, trend, price, reviews} = this.props;
+		const {num, name, rating, trend, price, reviews, actionCart, inCart} = this.props;
 		const trendText = trend > 0 ? '+' + trend : (trend < 0 ? trend : '-');
 		const trendClass = trend > 0 ? 'positive' : (trend < 0 ? 'negative' : '');
-		const { isChecked } = this.state;
 
 		return (
 			<tr className="item-row">
@@ -34,12 +27,12 @@ class Row extends Component {
 					{price > 0 ? (<span className="price-border">{'Р'.repeat(price)}</span>) : ''}
 				</td>
 				<td className="item-column reviews">
-					{reviews ? <span><i className="fa fa-comment-o"></i>{reviews}</span> : ''}
+					{reviews ? <span><i className="fa fa-comment-o"/>{reviews}</span> : ''}
 				</td>
 				<td className="item-column cart">
 					<label className="container" htmlFor={'in_cart_' + num}>
-						<input onChange={this.handleChange} type="checkbox" id={'in_cart_' + num} checked={(isChecked ? 'checked' : '')}/>
-						<span className="checkmark"></span>
+						<input onChange={() => actionCart(name)} type="checkbox" id={'in_cart_' + num} checked={(inCart ? 'checked' : '')}/>
+						<span className="checkmark"/>
 					</label>
 				</td>
 			</tr>
@@ -54,7 +47,7 @@ Row.propTypes = {
 	trend: PropTypes.number,
 	price: PropTypes.number,
 	reviews: PropTypes.number,
-	isChecked: PropTypes.bool,
+	actionCart: PropTypes.func,
 };
 
 Row.defaultProps = {
@@ -64,7 +57,7 @@ Row.defaultProps = {
 	trend: 0,
 	price: 0,
 	reviews: 0,
-	isChecked: false,
+	actionCart: () => {}
 };
 
 export default Row;

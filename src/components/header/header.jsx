@@ -2,9 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import './header.css';
+import HeaderNavPanel from "../headerNavPanel/headerNavPanel";
 
 const Header = () => (
-    <header></header>
+    <header>
+		<HeaderNavPanel/>
+	</header>
 );
 
 Header.propTypes = {};

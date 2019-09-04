@@ -1,0 +1,41 @@
+.fixed-nav-panel{
+	display: flex;
+	flex-direction: row;
+	font-size: 2rem;
+	color: white;
+	background: #de474b;
+}
+.fixed-nav-panel a{
+	color: white;
+	text-decoration: none;
+}
+.fixed-nav-panel a{
+	color: white;
+	text-decoration: none;
+}
+.fixed-nav-panel .index{
+	padding: 2rem 4rem;
+
+}
+.fixed-nav-panel .menu{
+	display: flex;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+.fixed-nav-panel .menu li{
+	display: inline-flex;
+}
+
+.fixed-nav-panel .menu li a{
+	height: auto;
+	width: 100%;
+	padding: 2rem 4rem;
+}
+.fixed-nav-panel .menu li .active{
+	background: #bd3c3e;
+}
+.fixed-nav-panel .menu li:hover{
+	background: #bd3b3e;
+}

@@ -4,7 +4,7 @@ import FixedBlock from "../../containers/fixedblock/fixedblock";
 
 const Footer = ( { showFixedBlock } ) => (
 	<footer>
-		{showFixedBlock? (<FixedBlock />): ''}
+		{showFixedBlock && (<FixedBlock />)}
 	</footer>
 );
 

@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import store from './store'
+import './index.css';
 import * as serviceWorker from './serviceWorker';
 
 import { Provider } from 'react-redux';
-import { BrowserRouter, Route} from 'react-router-dom';
+import { BrowserRouter, Route, Switch} from 'react-router-dom';
 
 import Index from './pages/index/Index';
 import Goods from './pages/goods/Goods';
@@ -13,9 +14,11 @@ import ShoppingCart from './pages/shopping_cart/ShoppingCart';
 ReactDOM.render(
 	<Provider store={store}>
 		<BrowserRouter>
-			<Route path="/" exact component={Index}/>
-			<Route path="/goods" component={Goods}/>
-			<Route path="/shopping_cart" component={ShoppingCart}/>
+			<Switch>
+				<Route path="/" exact component={Index}/>
+				<Route path="/goods" component={Goods}/>
+				<Route path="/shopping_cart" component={ShoppingCart}/>
+			</Switch>
 		</BrowserRouter>
 	</Provider>
 	, document.getElementById('root'));

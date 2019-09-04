@@ -24,9 +24,15 @@
 
 .items-table td.num, .items-table td.rating{
     color: gray;
+    font-size: 1rem;
+    font-weight: 600;
 }
 .items-table td.name{
     font-weight: bold;
+}
+.items-table td.trend{
+    font-size: 1rem;
+    font-weight: 600;
 }
 .items-table td.trend.positive{
     color: #0faf78;
@@ -37,6 +43,17 @@
 .items-table td.reviews{
     color: #c8af72;
     text-align: right;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.items-table td.reviews svg{
+    height: 1.1rem;
+    margin-right: .3rem;
+}
+.items-table td.reviews svg.stroke-no-fill path{
+    stroke-width: 2rem;
+    stroke: gray;
+    fill: none;
 }
 .price-border{
     display: inline-block;
@@ -46,9 +63,7 @@
     border-radius: 1rem;
     padding: .2rem .5rem;
     margin: 0;
-}
-.fa-comment-o:before {
-    content: "\F0E5";
+    font-family: monospace;
 }
 
 .container {

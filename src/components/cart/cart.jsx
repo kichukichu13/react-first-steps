@@ -20,8 +20,8 @@ const Cart = () => (
 				<div><h3>Преимущества покупок у нас</h3></div>
 				<div>
 					{texts.map((name, index) => (
-						<div>
-							<span>{index}</span>
+						<div key={index}>
+							<span>{index + 1}</span>
 							<span>{name}</span>
 						</div>
 					))}

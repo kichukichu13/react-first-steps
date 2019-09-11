@@ -7,6 +7,7 @@ const defaultItems = [
 		'rating': 2.87,
 		'price': 4,
 		'reviews': 5,
+		'inCart': false,
 	},
 	{
     'id': 2,
@@ -14,6 +15,7 @@ const defaultItems = [
 		'rating': 1.94,
 		'price': 4,
 		'trend': 14,
+		'inCart': false,
 	},
 	{
     'id': 3,
@@ -21,6 +23,7 @@ const defaultItems = [
 		'rating': 1.69,
 		'trend': 4,
 		'price': 3,
+		'inCart': false,
 	},
 	{
     'id': 4,

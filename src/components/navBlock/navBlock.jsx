@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 import './navBlock.css'
 import Title from "../title/title"
@@ -9,9 +10,9 @@ const NavBlock = () => (
 		<Wrapper>
 			<Title title="Главная"/>
 			<ul>
-				<li><a href="/" >Главная</a></li>
-				<li><a href="/goods" >Каталог</a></li>
-				<li><a href="/shopping_cart" >Корзина</a></li>
+				<li><Link to="/" >Главная</Link></li>
+				<li><Link to="/goods" >Каталог</Link></li>
+				<li><Link to="/shopping_cart" >Корзина</Link></li>
 			</ul>
 		</Wrapper>
 	</main>

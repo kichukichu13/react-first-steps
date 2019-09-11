@@ -1,15 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 import store from './store'
-import './index.css';
-import * as serviceWorker from './serviceWorker';
+import './index.css'
+import * as serviceWorker from './serviceWorker'
 
-import { Provider } from 'react-redux';
-import { BrowserRouter, Route, Switch} from 'react-router-dom';
+import { Provider } from 'react-redux'
+import { BrowserRouter, Route, Switch} from 'react-router-dom'
 
-import Index from './pages/index/Index';
-import Goods from './pages/goods/Goods';
-import ShoppingCart from './pages/shopping_cart/ShoppingCart';
+import Index from './pages/index/Index'
+import Goods from './pages/goods/Goods'
+import ShoppingCart from './pages/shopping_cart/ShoppingCart'
 
 ReactDOM.render(
 	<Provider store={store}>

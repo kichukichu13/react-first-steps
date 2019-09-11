@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-import './cart.css';
-import Title from "../title/title";
-import Wrapper from "../wrapper/wrapper";
-import CartItems from "../../containers/cartItems/cartItems";
+import './cart.css'
+import Title from "../title/title"
+import Wrapper from "../wrapper/wrapper"
+import CartItems from "../../containers/cartItems/cartItems"
 
 const texts = [
 	'Мы классные.',

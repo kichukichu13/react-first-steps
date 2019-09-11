@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
+import React, {Component} from 'react'
+import PropTypes from 'prop-types'
 
-import './cartItems.css';
-import {connect} from "react-redux";
+import './cartItems.css'
+import {connect} from "react-redux"
 
-import { bitGetDeclNum } from "../../helpers/bitGetDeclNum";
+import { bitGetDeclNum } from "../../helpers/bitGetDeclNum"
 
 class CartItems extends Component{
 
@@ -12,9 +12,10 @@ class CartItems extends Component{
 		const { items } = this.props;
 		let goods = [];
 		let goodsText = '';
+		let item;
 
 		if(items.length){
-			for(let item of items){
+			for(item of items){
 				if(item.inCart) goods.push(item.name);
 			}
 		}

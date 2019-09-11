@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { Link } from "react-router-dom";
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import { Link } from "react-router-dom"
 
-import './fixedblock.css';
-import {connect} from "react-redux";
-import { bitGetDeclNum } from "../../helpers/bitGetDeclNum";
+import './fixedblock.css'
+import {connect} from "react-redux"
+import { bitGetDeclNum } from "../../helpers/bitGetDeclNum"
 
 
 class FixedBlock extends Component {
@@ -13,8 +13,9 @@ class FixedBlock extends Component {
 	render() {
 		const { items } = this.props;
 		let count = 0;
+		let item;
 
-		for(let item of items){
+		for(item of items){
 			if(item.inCart) ++count;
 		}
 

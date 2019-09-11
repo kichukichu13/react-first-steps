@@ -1,9 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
 
-import './navBlock.css';
-import Title from "../title/title";
-import Wrapper from "../wrapper/wrapper";
+import './navBlock.css'
+import Title from "../title/title"
+import Wrapper from "../wrapper/wrapper"
 
 const NavBlock = () => (
 	<main>
@@ -17,9 +16,5 @@ const NavBlock = () => (
 		</Wrapper>
 	</main>
 );
-
-NavBlock.propTypes = {};
-
-NavBlock.defaultProps = {};
 
 export default NavBlock;

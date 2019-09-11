@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import { actionCart } from "../../actions/actionCart"
 
-import './table.css';
-import Row from "../../components/row/row";
-import items from "../../reducers/items";
+import './table.css'
+import Row from "../../components/row/row"
 
 class Table extends Component {
 
@@ -26,8 +25,8 @@ class Table extends Component {
 				</tr>
 				</thead>
 				<tbody>
-				{items.map(({name, rating, trend, price, reviews, inCart}, index) => (
-					<Row key={index} num={index + 1}
+				{items.map(({id, name, rating, trend, price, reviews, inCart}, index) => (
+					<Row key={id} num={index + 1} id={id}
 						 name={name}
 						 rating={rating}
 						 trend={trend}

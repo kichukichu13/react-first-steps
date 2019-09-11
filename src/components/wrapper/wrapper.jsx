@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import './wrapper.css';
+import './wrapper.css'
 
 const Wrapper = ({children}) => (
 	<div className="wrapper">{children}</div>

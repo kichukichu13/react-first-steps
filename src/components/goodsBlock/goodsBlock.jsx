@@ -1,10 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
 
-import './goodsBlock.css';
-import Title from "../title/title";
-import Table from "../../containers/table/table";
-import Wrapper from "../../components/wrapper/wrapper";
+import './goodsBlock.css'
+import Title from "../title/title"
+import Table from "../../containers/table/table"
+import Wrapper from "../../components/wrapper/wrapper"
 
 const GoodsBlock = () => (
 	<main>
@@ -14,9 +13,5 @@ const GoodsBlock = () => (
 		</Wrapper>
 	</main>
 );
-
-GoodsBlock.propTypes = {};
-
-GoodsBlock.defaultProps = {};
 
 export default GoodsBlock;

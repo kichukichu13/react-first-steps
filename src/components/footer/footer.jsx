@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import FixedBlock from "../../containers/fixedblock/fixedblock";
+import React from 'react'
+import PropTypes from 'prop-types'
+import FixedBlock from "../../containers/fixedblock/fixedblock"
 
 const Footer = ( { showFixedBlock } ) => (
 	<footer>

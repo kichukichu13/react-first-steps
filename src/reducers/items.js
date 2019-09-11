@@ -2,31 +2,28 @@ import { ADD_TO_CART } from '../constants'
 
 const defaultItems = [
 	{
-	  'id': 1,
+		'id': 1,
 		'name': 'Супер товар',
 		'rating': 2.87,
 		'price': 4,
 		'reviews': 5,
-		'inCart': false,
 	},
 	{
-    'id': 2,
+		'id': 2,
 		'name': 'Тоже хороший товар',
 		'rating': 1.94,
 		'price': 4,
 		'trend': 14,
-		'inCart': false,
 	},
 	{
-    'id': 3,
+		'id': 3,
 		'name': 'Неплохой товар',
 		'rating': 1.69,
 		'trend': 4,
 		'price': 3,
-		'inCart': false,
 	},
 	{
-    'id': 4,
+		'id': 4,
 		'name': 'Такой себе товар',
 		'rating': 0.46,
 		'trend': -17,

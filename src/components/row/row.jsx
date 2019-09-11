@@ -28,7 +28,7 @@ const Row = ({id, num, name, rating, trend, price, reviews, actionCart, inCart})
 						type="checkbox" id={id}
 						name={id}
 						value={name}
-						checked={inCart}
+						defaultChecked={inCart}
 					/>
 					<span className="checkmark"/>
 				</label>

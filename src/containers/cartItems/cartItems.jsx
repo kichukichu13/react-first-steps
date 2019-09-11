@@ -1,44 +1,41 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 import './cartItems.css'
-import {connect} from "react-redux"
+import { connect } from 'react-redux'
 
-import { bitGetDeclNum } from "../../helpers/bitGetDeclNum"
+import { bitGetDeclNum } from '../../helpers/bitGetDeclNum'
 
-class CartItems extends Component{
+class CartItems extends Component {
 
-	render() {
-		const { items } = this.props;
-		let goods = [];
-		let goodsText = '';
-		let item;
+  render () {
+    const { inCartItems } = this.props
+    const count = Object.keys(inCartItems).length
+    let goodsText = ''
 
-		if(items.length){
-			for(item of items){
-				if(item.inCart) goods.push(item.name);
-			}
-		}
+    if (count) {
+      let key
+      for (key in inCartItems) {
+        goodsText += ', ' + inCartItems[key]
+      }
+      goodsText = goodsText.substr(2)
+    }
 
-		const count = goods.length;
-		goodsText = goods.join(', ');
-
-		return (
-			<div>
-				{count? `Вы выбрали ${count} товар${bitGetDeclNum(count, ['', 'а', 'ов'])}: ${goodsText}`: 'Вы не выбрали ни одного товара'}
-			</div>
-		);
-	}
+    return (
+      <div>
+        {count ? `Вы выбрали ${count} товар${bitGetDeclNum(count, ['', 'а', 'ов'])}: ${goodsText}` : 'Вы не выбрали ни одного товара'}
+      </div>
+    )
+  }
 }
 
 CartItems.propTypes = {
-	items: PropTypes.array
-};
+  items: PropTypes.array
+}
 
 CartItems.defaultProps = {
-	items: []
-};
+  items: []
+}
 
-export default connect(state => ({
-	items: state.items
-}))(CartItems);
+const mapStateToProps = (state) => ({ inCartItems: state.inCartItems })
+export default connect(mapStateToProps)(CartItems)

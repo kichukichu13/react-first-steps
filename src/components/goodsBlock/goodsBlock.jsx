@@ -2,7 +2,7 @@ import React from 'react'
 
 import './goodsBlock.css'
 import Title from "../title/title"
-import Table from "../../containers/table/table"
+import Table from "../table/table"
 import Wrapper from "../../components/wrapper/wrapper"
 
 const GoodsBlock = () => (

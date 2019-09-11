@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react'
 
-import './header.css';
-import HeaderNavPanel from "../headerNavPanel/headerNavPanel";
+import './header.css'
+import HeaderNavPanel from '../headerNavPanel/headerNavPanel'
 
 const Header = () => (
-    <header>
-		<HeaderNavPanel/>
-	</header>
-);
+  <header>
+    <HeaderNavPanel/>
+  </header>
+)
 
-export default Header;
+export default Header

@@ -5,7 +5,8 @@ import './index.css'
 import * as serviceWorker from './serviceWorker'
 
 import { Provider } from 'react-redux'
-import { BrowserRouter, Route, Switch} from 'react-router-dom'
+import { BrowserRouter} from 'react-router-dom'
+import {Route, Switch} from 'react-router'
 
 import Index from './pages/index/Index'
 import Goods from './pages/goods/Goods'

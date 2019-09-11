@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import './row.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faComment } from '@fortawesome/free-solid-svg-icons'
+import InCartCheckbox from '../../containers/InCartCheckbox/InCartCheckbox'
 
 const Row = ({id, num, name, rating, trend, price, reviews, actionCart, inCart}) => {
 	const trendText = trend > 0 ? '+' + trend : (trend < 0 ? trend : '–');
@@ -21,18 +22,7 @@ const Row = ({id, num, name, rating, trend, price, reviews, actionCart, inCart})
 			<td className="item-column reviews">
 				{reviews && (<span><FontAwesomeIcon className="stroke-no-fill" icon={faComment} />{reviews}</span>)}
 			</td>
-			<td className="item-column cart">
-				<label className="container" htmlFor={id}>
-					<input
-						onChange={() => actionCart(id)}
-						type="checkbox" id={id}
-						name={id}
-						value={name}
-						defaultChecked={inCart}
-					/>
-					<span className="checkmark"/>
-				</label>
-			</td>
+			<td className="item-column cart"><InCartCheckbox {...{id, name, inCart}} /></td>
 		</tr>
 	)
 };
